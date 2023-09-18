@@ -1,18 +1,76 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .flower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Agregamos posición relativa para posicionar el tallo correctamente */
+  }
 
-# Other files and folders
-.settings/
+  .petals {
+    position: relative;
+    width: 0;
+    height: 0;
+  }
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+  .petal {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+  }
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+  .petal:nth-child(1) {
+    transform: rotate(30deg);
+  }
+  
+  .petal:nth-child(2) {
+    transform: rotate(60deg);
+  }
+
+  .petal:nth-child(3) {
+    transform: rotate(120deg);
+  }
+
+  .petal:nth-child(4) {
+    transform: rotate(150deg);
+  }
+
+  .center {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  .stem {
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: green;
+    border-radius: 0%;
+    top: 473px;
+    left: 210px;
+  }
+</style>
+</head>
+<body>
+  <div class="flower">
+    <div class="petals">
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="petal"></div>
+      <div class="center"></div>
+    </div>
+    <div class="stem"></div>
+  </div>
+</body>
+</html>
